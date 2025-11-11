@@ -1,4 +1,7 @@
 # BTC-PaperWallet-Generator
+**This tool is a non-custodial, offline key pair and QR code generator for creating static Bitcoin paper wallets.  
+이 리포는 엄밀한 의미의 페이퍼월렛 생성기가 아니며, 단 하나의 키 쌍과 그 QR코드를 생성하도록 만들어졌습니다.**
+
 Wallet(HDKey) 아닌 개인키/공개키 쌍만 생성하고 싶을 경우를 위해 작성함.  
 이 리포는 사실상 **bitcoinlib의 래퍼 클래스** 에 QR코드 생성을 혼합한 클래스 패키지임.  
 <br>
