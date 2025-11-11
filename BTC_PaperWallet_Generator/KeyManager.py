@@ -1,8 +1,8 @@
 from bitcoinlib.keys import Key
-
+import qrcode
 
 class KeyManager:
-    def __init__(self, new_key, import_key=None, passwd=None):
+    def __init__(self, new_key : bool, import_key=None, passwd=None):
         if new_key == True:
             self.__key = Key()
             if passwd != None:
@@ -28,6 +28,40 @@ class KeyManager:
     def public_address(self):
         return self.__public_address
     
+    def get_private_key_QR(self):
+        qr = qrcode.QRCode(
+            error_correction=qrcode.constants.ERROR_CORRECT_H,
+            box_size=8,
+            border=8
+        )
+        qr.add_data(self.private_key)
+        qr.make()
+        img = qr.make_image()
+        img.save("outputs/UNENCRYPTED_Private_Key.png")
+
+    def get_encrypted_private_key_QR(self):
+        qr = qrcode.QRCode(
+            error_correction=qrcode.constants.ERROR_CORRECT_H,
+            box_size=8,
+            border=8
+        )
+        qr.add_data(str(self.encrypted_private_key))
+        qr.make(fit=False)
+        img = qr.make_image()
+        img.save("outputs/encrypted_Private_Key.png")
+
+    def get_public_address_QR(self):
+        qr = qrcode.QRCode(
+            error_correction=qrcode.constants.ERROR_CORRECT_H,
+            box_size=8,
+            border=8
+        )
+        qr.add_data(self.public_address)
+        qr.make()
+        img = qr.make_image()
+        img.save("outputs/public_address.png")
+        
+
     
     
         
