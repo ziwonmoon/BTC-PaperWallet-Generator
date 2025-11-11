@@ -1,7 +1,10 @@
 # BTC-PaperWallet-Generator
 Wallet(HDKey) 아닌 개인키/공개키 쌍만 생성하고 싶을 경우를 위해 작성함.  
-이 리포는 사실상 **bitcoinlib의 래퍼 클래스** 에 QR코드 생성을 혼합한 클래스 패키지임.
+이 리포는 사실상 **bitcoinlib의 래퍼 클래스** 에 QR코드 생성을 혼합한 클래스 패키지임.  
+<br>
+**안전한 사용을 위해서는, Git Clone -> Install Libraries -> Disconnect from Internet -> Generate Key Pair -> Delete All Files(including this repo) -> Connect Internet 의 단계를 따르십시오**
 
+### If you just want to make a pair of the private key and the public address, see the "Quick Start" part below.
 
 ---
 
