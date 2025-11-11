@@ -14,6 +14,13 @@ Wallet(HDKey) 아닌 개인키/공개키 쌍만 생성하고 싶을 경우를 �
 2. 그 후 실행하면 outputs 디렉토리 안에 비밀번호로 암호화된 개인키 QR, 공개 주소 QR이 저장됩니다.  
     Run it and you get two QR codes in the outputs folder.
 
+## If you want use Docker (not want to setup the environment)
+(환결 설정 필요 없음)  
+```Shell
+docker build -t btc-paper-wallet .
+docker run -v $(pwd)/outputs:/app/outputs btc-paper-wallet
+```
+
 ---
 
 
